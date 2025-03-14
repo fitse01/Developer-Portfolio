@@ -1,101 +1,105 @@
+import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ChevronRight, Download } from "lucide-react";
+import HeroSection from "@/components/hero-section";
+import SkillsSection from "@/components/skills-section";
+import ExperienceSection from "@/components/experience-section";
+import TestimonialsSection from "@/components/testimonials-section";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <HeroSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* About Me Section */}
+      <section id="about" className="py-16 bg-muted/50 dark:bg-muted/20">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="md:w-1/3">
+              <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
+                <Image
+                  src="/placeholder.svg?height=256&width=256"
+                  alt="Fitsum Tafese"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="md:w-2/3">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">
+                About Me
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                I'm a passionate Full-Stack Web Developer with several years of
+                experience in building scalable and performant web applications.
+                I specialize in modern JavaScript frameworks and libraries, with
+                a focus on creating intuitive user experiences backed by robust
+                server-side implementations.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                As a freelance developer, I've worked with clients across
+                various industries, helping them transform their ideas into
+                functional, beautiful web applications. My approach combines
+                technical expertise with a deep understanding of user needs and
+                business goals.
+              </p>
+              <Link href="/about">
+                <Button variant="outline" className="group">
+                  Learn more about me
+                  <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Skills Section */}
+      <SkillsSection />
+
+      {/* Experience Section */}
+      <ExperienceSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Call to Action Section */}
+      <section className="py-16 bg-primary text-primary-foreground">
+        <div className="container px-4 md:px-6 text-center">
+          <h2 className="text-3xl font-bold tracking-tight mb-4">
+            Interested in working together?
+          </h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+            I'm currently available for freelance projects and full-time
+            opportunities. Let's build something amazing together!
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/projects">
+              <Button variant="secondary" size="lg">
+                View My Projects
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="secondary" size="lg">
+                Contact Me
+              </Button>
+            </Link>
+            <Link href="/resume">
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-primary-foreground/10 hover:bg-primary-foreground/20"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
