@@ -15,17 +15,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://fitsumtafese.com",
+    url: "https://fitsum.net",
     title: "Fitsum Tafese | Full-Stack Web Developer",
     description:
-      "Portfolio of Fitsum Tafese, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and more.",
+      "Portfolio of Fitsum Tafese, a Full-Stack Web Developer specializing in React, Next.js, Node.js,React Native more.",
     siteName: "Fitsum Tafese Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Fitsum Tafese | Full-Stack Web Developer",
     description:
-      "Portfolio of Fitsum Tafese, a Full-Stack Web Developer specializing in React, Next.js, Node.js, and more.",
+      "Portfolio of Fitsum Tafese, a Full-Stack Web Developer specializing in React, Next.js, Node.js,React Native more.",
   },
 };
 

@@ -6,6 +6,8 @@ import HeroSection from "@/components/hero-section";
 import SkillsSection from "@/components/skills-section";
 import ExperienceSection from "@/components/experience-section";
 import TestimonialsSection from "@/components/testimonials-section";
+import HomeProject from "@/components/projects";
+import aboutImg from "@/public/asset/about/fitsum.jpg";
 
 export default function Home() {
   return (
@@ -20,7 +22,7 @@ export default function Home() {
             <div className="md:w-1/3">
               <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
                 <Image
-                  src="/placeholder.svg?height=256&width=256"
+                  src={aboutImg}
                   alt="Fitsum Tafese"
                   fill
                   className="object-cover"
@@ -59,6 +61,9 @@ export default function Home() {
 
       {/* Skills Section */}
       <SkillsSection />
+
+      {/* Projects Section */}
+      <HomeProject />
 
       {/* Experience Section */}
       <ExperienceSection />
